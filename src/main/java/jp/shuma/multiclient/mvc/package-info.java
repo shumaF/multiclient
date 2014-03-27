@@ -16,6 +16,7 @@
  *		  - Post.java			変更		<br/>
  *		  ... Dataは次のversionで			<br/>
  * @author shuma
- * @since 0.21
+ * @since 0.2
+ * @version 0.21
  */
 package jp.shuma.multiclient.mvc;
