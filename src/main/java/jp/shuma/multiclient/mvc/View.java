@@ -8,7 +8,6 @@ import javax.swing.JList;
 import javax.swing.DefaultListModel;
 import javax.swing.JScrollPane;
 
-import jp.shuma.multiclient.mvc.News;
 /**
  * Viewクラス．
  * ここでViewに関するすべてのオブジェクトの大きさを扱う．
@@ -66,7 +65,7 @@ public class View extends JPanel {
 	 * PostPanel. ．
 	 * @since 0.2
 	 */
-	private PostPanel post;
+	private Post.Panel post;
 	/**
 	 * コンストラクタ．
 	 * @since 0.2
@@ -74,7 +73,7 @@ public class View extends JPanel {
 	public View() {
 		this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
-		post = new PostPanel();
+		post = new Post.Panel();
 		post.setPreferredSize(new Dimension(View.POST_WITHD, View.POST_HEIGHT));
 		this.add(post);
 

@@ -11,7 +11,11 @@
  *		  - Controller.java     作成		<br/>
  *		  - PostPanel.java      作成 	<br/>
  *		  - News.java     		作成 	<br/>
+ *  0.21 refactoring! 2014/3/28			<br/>
+ *		  - PostPanel.java -> Post.java <br/>
+ *		  - Post.java			変更		<br/>
+ *		  ... Dataは次のversionで			<br/>
  * @author shuma
- * @since 0.2
+ * @since 0.21
  */
 package jp.shuma.multiclient.mvc;
