@@ -1,18 +1,48 @@
 package jp.shuma.multiclient;
 
+import javax.swing.JFrame;
+
+import jp.shuma.multiclient.mvc.Controller;
+import jp.shuma.multiclient.mvc.Model;
+import jp.shuma.multiclient.mvc.View;
 /**
- * メインクラス．
- * とりあえずHello・・・
+ * メインクラス．<br/>
+ * mvcのMainFrameを開く．
  * @since 0.1
- * @version 0.1
- * @param shuma
+ * @version 0.2
+ * @author shuma
  */
 public class Main {
 	/**
+	 * コンストラクタ．
+	 * @param args コマンドライン引数．
+	 * @since 0.2
+	 */
+	public Main(String[] args) {
+		View view = new View();
+		Model model = new Model();
+		Controller controller = new Controller();
+
+		view.setModel(model);
+		view.setController(controller);
+		model.setView(view);
+		controller.setModel(model);
+
+		JFrame window = new JFrame("MultiClient");
+		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		window.getContentPane().add(view);
+		window.pack();
+		window.setVisible(true);
+
+		model.start();
+	}
+	/**
 	 * メインメソッド．
+	 * @param args コマンドライン引数．
 	 * @since 0.1
+	 * @version 0.2
 	 */
 	public static void main(String[] args) {
-		System.out.println("Hello MultiClient");
+		new Main(args);
 	}
 }
