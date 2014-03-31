@@ -40,7 +40,7 @@ public class View extends JPanel {
 	 * JListのHeight．
 	 * @since 0.2
 	 */
-	public static final int CELL_HEIGHT = 50;
+	public static final int CELL_HEIGHT = 70;
 	/**
 	 * JListのWidth．
 	 * @since 0.2
@@ -83,9 +83,9 @@ public class View extends JPanel {
 		this.list.setLayoutOrientation(JList.VERTICAL);
 		this.list.setCellRenderer(new News.Renderer());
 
-		this.listModel.add(0, null);
-		this.listModel.add(1, null);
-		this.listModel.add(2, null);
+		// this.listModel.add(0, null);
+		// this.listModel.add(1, null);
+		// this.listModel.add(2, null);
 
 		JScrollPane scroll = new JScrollPane();
 		scroll.setPreferredSize(new Dimension(LIST_WITHD, LIST_HEIGHT));

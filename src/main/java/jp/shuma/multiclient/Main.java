@@ -5,6 +5,7 @@ import javax.swing.JFrame;
 import jp.shuma.multiclient.mvc.Controller;
 import jp.shuma.multiclient.mvc.Model;
 import jp.shuma.multiclient.mvc.View;
+import jp.shuma.multiclient.sns.TwitterClient;
 /**
  * メインクラス．<br/>
  * mvcのMainFrameを開く．
@@ -33,8 +34,10 @@ public class Main {
 		window.getContentPane().add(view);
 		window.pack();
 		window.setVisible(true);
-
-		model.start();
+		
+		TwitterClient client = new TwitterClient(model);
+		model.setClient(client);
+		// model.start();
 	}
 	/**
 	 * メインメソッド．
